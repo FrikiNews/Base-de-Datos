@@ -17,24 +17,6 @@
                   2. Renombrar Nombre y Jefe por NombreEmpleado y NombreJefe
                   3. Asegurar que ningún campo sea NULL en ambas tablas
                   4. Presupuesto total por departamento, de mayor a menor
-   ------------------------------------------------------------------------------------------
-   NOTA: MySQL Workbench trae activado el modo de actualización segura, que rechaza los
-   UPDATE y DELETE cuyo WHERE no use una columna indexada (error 1175). Se desactiva para
-   esta sesión y se restablece al final del archivo.
-   ------------------------------------------------------------------------------------------
-   CÓMO TOMAR LAS CAPTURAS DE EVIDENCIA
-
-   El estado de las tablas cambia conforme avanza el archivo: se agregan columnas, se borran
-   renglones y se renombran campos. Por eso las capturas NO se pueden tomar al final, hay que
-   tomarlas punto por punto conforme se va ejecutando.
-
-   1. Ejecutar primero la PARTE 0 sola, para crear la base de datos.
-   2. Para cada punto siguiente: seleccionar con el mouse el bloque completo, presionar el
-      botón del rayo (Workbench ejecuta solo lo seleccionado) y capturar el Result Grid.
-   3. Cada punto ya trae al final su propio SELECT o DESCRIBE de comprobación, así que la
-      captura sale sola.
-   ========================================================================================== */
-
 /* ================================ PARTE 0: BASE DE DATOS ================================= */
 DROP DATABASE IF EXISTS proyecto_final;
 CREATE DATABASE proyecto_final
@@ -201,7 +183,7 @@ SELECT * FROM Empleados ORDER BY IdEmpleado;
 
 
 /* ------------------------------------------------------------------------------------------
-   PASO ADICIONAL (no pedido, pero necesario para que el dato sea correcto)
+   PASO ADICIONAL
    El punto 3 llenó NumEmpleados ANTES de que el punto 4 borrara a cuatro empleados, así que
    ese conteo quedó desactualizado. Se vuelve a calcular.
    ------------------------------------------------------------------------------------------ */
